@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HelloAndroid</string>
+    <string name="strBtn1">버튼입니다</string>
+    <string name="strCheck1">체크박스입니다</string>
+</resources>
