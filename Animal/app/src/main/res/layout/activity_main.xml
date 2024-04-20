@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginBottom="20dp"
+        android:text="선택을 시작하겠습니까?"
+        app:layout_constraintBottom_toTopOf="@+id/ChkAgree"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/ChkAgree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:text="시작함"
+        app:layout_constraintBottom_toTopOf="@+id/Text2"
+        app:layout_constraintStart_toStartOf="@+id/Text1"
+        app:layout_constraintTop_toBottomOf="@+id/Text1" />
+
+    <TextView
+        android:id="@+id/Text2"
+        android:layout_width="265dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="45dp"
+        android:text="좋아하는 애완동물은?"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/Rgroup1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ChkAgree" />
+
+    <RadioGroup
+        android:id="@+id/Rgroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="42dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/BtnOK"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Text2">
+
+        <RadioButton
+            android:id="@+id/RdoDog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/RdoDog" />
+
+        <RadioButton
+            android:id="@+id/RdoCat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/RdoCat" />
+
+        <RadioButton
+            android:id="@+id/RdoRabbit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/RdoRabbit" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/BtnOK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="선택 완료"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/Rgroup1"
+        app:layout_constraintTop_toBottomOf="@+id/Rgroup1" />
+
+    <ImageView
+        android:id="@+id/ImgPet"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="156dp"
+        android:layout_marginBottom="100dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/dog" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
